@@ -1,0 +1,235 @@
+/* Import Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+
+  background-image: url('senior_citizen.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Gradient Animation for Background */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Container Styling */
+.container {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  max-width: 900px;
+  width: 95%;
+  animation: slideIn 1.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* Slide-in animation for container */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Heading Styling */
+h1 {
+  font-family: 'Inter', sans-serif; /* Clean, modern, interactive font */
+  font-size: 2rem;
+  color: #a22ad5;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+               0 0 20px rgba(255, 255, 255, 0.6), 
+               0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+/* Fade-in animation for the heading */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Instruction Text */
+.instruction {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+/* Microphone Button Wrapper */
+.mic-button-wrapper {
+  margin-bottom: 20px;
+}
+
+/* Microphone Button */
+#mic-button {
+  background-color: #199481;
+  color: white;
+  font-size: 1.1rem;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(231, 76, 60, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  animation: pulse 2s infinite;
+}
+
+#mic-button:hover {
+  background-color: #c0392b;
+  transform: scale(1.1);
+}
+
+/* Pulse animation for button */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.9);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(231, 76, 60, 0.6);
+  }
+}
+
+/* Response Box */
+.response-box {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #34495e;
+  min-height: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Features Section */
+.features {
+  margin-top: 30px;
+}
+
+.features h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Feature Box Styling */
+.feature-box {
+  background: linear-gradient(145deg, #e6e6e6, #ffffff);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: featureFadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.feature-box:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.feature-box:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.feature-box:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.feature-box:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.feature-box:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes featureFadeIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.feature-box span {
+  font-size: 2.5rem;
+  color: #3498db;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #34495e;
+  margin: 0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.feature-box:hover p {
+  color: #2980b9;
+}
